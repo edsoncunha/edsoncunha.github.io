@@ -78,4 +78,4 @@ Existem muitos meios para capturar problemas antes que eles eventualmente vão p
 >
 >   -- Mais do que a própria guerra
 >
->   (Hernest Hemingway)
+>   (Ernest Hemingway)
