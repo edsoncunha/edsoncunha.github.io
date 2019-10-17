@@ -18,7 +18,7 @@ Ninguém toca um solo ou escreve um programa sofisticado com meia dúzia de aula
 
 Como diz aquele clichê, é muito mais transpiração do que inspiração. O que importa não é o tamanho do passo, mas não parar de caminhar. A experiência é adquirida durante a jornada. 
 
-Ninguém começa a programar já pendurado em uma IDE. Antes, as pessoas aprendem a interpretar e resolver problemas, estruturar a solução na língua vernacular ou ALGOL, para só depois começar a mexer com código em uma linguagem de programação qualquer. Existe uma extensa caminhada entre o marco zero e a elaboração de arquiteturas de grandes projetos.
+Ninguém começa a programar já pendurado em uma IDE. Antes, as pessoas aprendem a interpretar e resolver problemas, estruturar a solução em português ou ALGOL, para só depois começar a mexer com código em uma linguagem de programação qualquer. Existe uma extensa caminhada entre o marco zero e a elaboração de arquiteturas de grandes projetos.
 
 ## Faça sua musculação
 
@@ -54,7 +54,7 @@ Você está agarrando em um trecho de um livro técnico que não consegue entend
 Cada pessoa tem uma história única. Os melhores musicistas do mundo passam por vários mestres e isso é absolutamente normal, pois cada pessoa tem seus pontos fortes, experiências e níveis de conhecimento no fazer musical. Ao iniciar uma aula, meu primeiro professor sempre vai me cobrar várias escalas de cor (maior, menor, menor melódica, menor harmônica... vixe!), enquanto o segundo vai exigir que meus graves soem como uma buzina de navio.
 
 
-Beber de várias águas te faz entender melhor de água. [Donald Knuth](https://pt.wikipedia.org/wiki/Donald_Knuth), o maior cientista da computação vivo, nos recomenda ler código de pessoas mais experientes. Também leia livros da área. Eles existem aos montes e são excelentes para aprender com a vivência de profissionais com décadas de experiência. Você comprou um livro e não viu valor? Guarde-o, pois o efeito de Dunning-Kruger provavelmente está correndo em suas veias. Eu te garanto que, depois de alguns anos, você terá sofrido muitos problemas na prática -- e o conhecimento daquele livro, muito provavelmente, vai te ajudar a aliviar essa dor.
+Beber de várias águas te faz entender melhor de água. [Donald Knuth](https://pt.wikipedia.org/wiki/Donald_Knuth), o maior cientista da computação vivo, nos recomenda ler código de pessoas mais experientes. Também leia livros da área. Eles existem aos montes e são excelentes para aprender com a vivência de profissionais com décadas de experiência. Você comprou um livro e não viu valor? Guarde-o, pois o [efeito de Dunning-Kruger](https://pt.m.wikipedia.org/wiki/Efeito_Dunning-Kruger) provavelmente está correndo em suas veias. Eu te garanto que, depois de alguns anos, você terá sofrido muitos problemas na prática -- e o conhecimento daquele livro, muito provavelmente, vai te ajudar a aliviar essa dor.
 
 <!-- ![image](https://musicadvisor.com/wp-content/uploads/2017/05/piano_720.jpg)
 
