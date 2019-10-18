@@ -2,6 +2,7 @@
 layout: post
 title:  Lições da música para evoluir no desenvolvimento de software
 image: https://live.staticflickr.com/7209/6960939955_df60b8523b_c.jpg
+tags: carreira
 ---
 
 Programar é coisa de gênio. Música é só para quem tem o dom. Será?

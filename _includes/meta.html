@@ -10,8 +10,8 @@
     <meta name="description" content="{{ page.description }}" />
     <meta property="og:description" content="{{ page.description }}" />
     {% else %}
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
+    <meta name="description" content="{{ site.seo.description }}">
+    <meta property="og:description" content="{{ site.seo.description }}" />
     {% endif %}
     <meta name="author" content="{{ site.name }}" />
 
@@ -20,14 +20,22 @@
     <meta property="twitter:title" content="{{ page.title }}" />
     {% endif %}
 
+    {% if page.tags %}
+    <meta name="keywords" content="{{ page.tags }},{{ site.seo.keywords }}">
+    {% elsif post.tags %}
+    <meta name="keywords" content="{{ post.tags }},{{ site.seo.keywords }}">
+    {% else %}
+    <meta name="keywords" content="{{ site.seo.keywords }}">
+    {% endif %}
+
     {% if page.image %}
     <meta property="og:image" content="{{ page.image }}"/>
     <meta property="twitter:image" content="{{ page.image }}"/>
-    {% else if post.image %}
+    {% elsif post.image %}
     <meta property="og:image" content="{{ post.image }}"/>
     <meta property="twitter:image" content="{{ post.image }}"/>
         {% else %}
     <meta property="og:image" content="{{ site.avatar }}"/>
     <meta property="twitter:image" content="{{ site.avatar }}"/>
     {% endif %}
-    <meta property="og:site_name" content="Edson Cunha - Desenvolvedor de Software"/>
+    <meta property="og:site_name" content="Edson Cunha - Um blog sobre desenvolvimento de software"/>

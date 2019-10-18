@@ -11,7 +11,12 @@ title: Edson Cunha
 author: Edson Cunha
 
 # Short bio or description (displayed in the header)
-description: Desenvolvedor de Software
+description: Desenvolvedor de Software 
+
+seo:
+  description: Um blog sobre assuntos ligados ao desenvolvimento de software
+  keywords: software development,desenvolvimento de software,java,kotlin,c#,chsarp,javascript,carreira
+
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://secure.gravatar.com/avatar/3d72a7a1aed4cf8d5b0823740c26a09e
