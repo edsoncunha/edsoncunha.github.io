@@ -31,15 +31,15 @@ Músicos profissionais estudam horas por dia, desde os primeiros contatos com o 
 
 Para que estejam aptos a tocar, músicos praticam regularmente, de modo que seus movimentos fiquem precisos e automáticos e seus corpos e mentes estejam sempre em condições para a execução musical.
 
-Se você já está programando diariamente, muito provavelmente esse fortalecimento já acontece naturalmente. Se não, procure se exercitar. A despeito de décadas de experiência, o [Tio Bob](https://www.amazon.com.br/Codificador-Limpo-Bob-Martin/dp/8576086476/ref=asc_df_8576086476/?tag=googleshopp00-20&linkCode=df0&hvadid=379787347388&hvpos=1o2&hvnetw=g&hvrand=11527521176014381259&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-809202560536&psc=1) pratica katas diariamente para testar e manter seu condicionamento. A repetição nos faz escrever código mais automaticamente e libera o cérebro para outras preocupações. Isso é muito importante, pois não conseguimos prestar atenção em todas as coisas ao mesmo tempo.
+Se você já está programando diariamente, muito provavelmente esse fortalecimento já acontece naturalmente. Se não, procure se exercitar. A despeito de décadas de experiência, o [Tio Bob](https://amzn.to/2P6WoO4) pratica katas diariamente para testar e manter seu condicionamento. A repetição nos faz escrever código mais automaticamente e libera o cérebro para outras preocupações. Isso é muito importante, pois não conseguimos prestar atenção em todas as coisas ao mesmo tempo.
 
 ## Ponha o dedo na ferida
 
 Quando se estuda um solo, por exemplo, não se gasta muito tempo repassando as partes que já estão soando bem. Em vez disso, a pessoa pratica os trechos em que costuma errar ou que ainda não estão bons o suficiente. Eles são executados compasso por compasso, mais lentamente e depois acelerando, até que os problemas estejam resolvidos e a música seja tocada de ponta a ponta com qualidade. 
 
-Você já escreve código com conforto, mas bate aquela insegurança para escrever testes? Separe um tempo para você, leia ([dica 1](https://www.amazon.com.br/Test-Driven-Development-Kent-Beck/dp/0321146530/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=tdd&qid=1571288918&s=books&sr=1-1), [dica 2](https://www.amazon.com.br/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627)), meta a mão na massa e aprenda!
+Você já escreve código com conforto, mas bate aquela insegurança para escrever testes? Separe um tempo para você. Leia [o livro de TDD do Kent Beck](https://amzn.to/2pCdGYw), ou [a versão de Steve Freman e Nat Price](https://amzn.to/2VZkCLv), depois meta a mão na massa e aprenda!
 
-_Adiantando uma discussão futura: entregar código devidamente testado é *sua* obrigação!_
+_Adiantando uma discussão futura: entregar código devidamente testado é sua obrigação!_
 
 ## Descanse, alterne e insista
 
