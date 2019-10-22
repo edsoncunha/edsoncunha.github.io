@@ -17,15 +17,15 @@ O ponto-chave é não deixar o projeto deteriorar. Se ele está no começo, esta
 
 ![A pirâmide de testes de Mike Cohn](https://martinfowler.com/articles/practical-test-pyramid/testPyramid.png)
 
-<p class="figcaption">A pirâmide de testes. A base, que queremos alargar, é composta pelos testes unitários. 
-<br />Crédito da imagem: <a href="https://martinfowler.com/articles/practical-test-pyramid.html">Martin Fowler | The Test Pyramid</a></p>
+<p class="figcaption">A pirâmide de testes, de Mike Cohn. A base, que queremos alargar, é composta pelos testes unitários. 
+<br />Crédito da imagem: <a href="https://martinfowler.com/articles/practical-test-pyramid.html">Martin Fowler</a></p>
 
 - Por quê?
     - Aumentar a cobertura de código quando a base estiver grande é mais penoso
-    - A exigência de cobertura implica em subir código que vai efetivamente ser usado, evitando desperdícios
+    - Testes não nos livram integralmente de problemas, mas a ausência deles é muito pior
     - Mesmo que o time não pratique os testes primeiro (TDD), escrever um grande volume de testes depois de fazer o código é muito sofrido. O build, muito provavelmente, vai quebrar. Isso condiciona as pessoas a fazer commits menores e, por conta disso, dividir as tarefas em partes menores. 
     - Tarefas mais atômicas proporcionam uma melhor visibilidade do andamento do projeto e oportunidades de paralelismo entre os membros do time
-    - Times muito paralelos tendem a perceber mais rapidamente os incômodos do código, como classees que comecem a fazer mais coisas do que deveriam. Muitas pessoas mexendo em uma mesma classe normalmente indica que ela tem muitas dependências e/ou responsabilidades, o que torna a evolução mais difícil e os conflitos de merge mais frequentes
+    - Times muito paralelos tendem a perceber mais rapidamente os incômodos do código, como classes que comecem a fazer mais coisas do que deveriam. Muitas pessoas mexendo em uma mesma classe normalmente indica que ela tem muitas dependências e/ou responsabilidades, o que torna a evolução mais difícil e os conflitos de merge mais frequentes
     
 - Como?
     - Faça o Jenkins construir o projeto a cada commit
@@ -33,7 +33,7 @@ O ponto-chave é não deixar o projeto deteriorar. Se ele está no começo, esta
     - Use um plugin como o [Cobertura](https://github.com/jenkinsci/cobertura-plugin), que falha o build caso as métricas estejam abaixo do limite. O pulo do gato com esse plugin é permitir que ele atualize o limite a cada build: se a cobertura cresceu de 40% para 44%, então essa passa a ser a cobertura mínima para o que o build passe.
     - Se você usa Sonar, terá o mesmo resultado ao exigir 100% de cobertura no código que está entrando. Nos _quality gates_, procure as métricas que contém "new code" na descrição e associe-as à análise do seu projeto.
 
-Os resultados que tivemos com isso no time foi bem interessante: 
+Os resultados que vi foram bem interessantes: 
 - Códigos desnecessários não são cobertos pelos testes, o que faz build quebrar. As pessoas pararam de projetar canhões para matar moscas.
 - As tarefas passaram a ser mais subdivididas
 - O planejamento e a organização do time ficaram mais apurados
