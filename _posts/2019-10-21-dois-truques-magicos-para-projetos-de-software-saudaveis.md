@@ -54,7 +54,7 @@ Em programação dinâmica, existe um conceito chamado _Princípio da Otimalidad
 
 > Para um dado estado do sistema, a política ótima para os estados remanescentes é independente da política de decisão adotada em estados anteriores.
 
- Em outras palavras, uma solução é a melhor possível - a solução _ótima_ - se cada uma de suas subdivisões é também a melhor possível. Por exemplo: um pacote TCP chegará a seu destino pela melhor rota ótima apenas se, a cada passo, ele escolher o trecho mais rápido possível entre os roteadores que ele "enxerga" a partir daquele ponto.
+ Em outras palavras, uma solução é a melhor possível - a solução _ótima_ - se cada uma de suas subdivisões é também a melhor possível. Por exemplo: um pacote TCP chegará a seu destino pela melhor rota se, a cada passo, ele escolher o trecho mais rápido possível entre os roteadores que ele "enxerga" a partir daquele ponto.
 
 Aplicando o conceito ao nossos projetos, o que temos é que ele será bacana, enxuto e fácil de compreender se cada uma de suas partes também o forem. Se não abrirmos mão de construir classes enxutas e coesas, assim também serão os agrupamentos de mais alto nível, como pacotes, módulos, bibliotecas etc.
 
