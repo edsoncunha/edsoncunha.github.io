@@ -32,6 +32,12 @@ O ponto-chave é não deixar o projeto deteriorar. Se ele está no começo, esta
     - Integração contínua como cultura e uma ideia a ser comprada pelo time. Apenas o ferramental não basta.
     - Plugins de gamificação - CCTray + áudios no commit bem-sucedido, na quebra, na tentativa fracassada de consertar e na bem-sucedida
 
+- Resultados esperados
+    - Código desnecessário não é coberto pelos testes e é então descartado
+    - Tarefas mais subdivididas
+    - Amadurecimento do planejamento e organização do time
+    - Entregas mais distribuídas ao longo do tempo
+
 # 2) Mantenha as classes com uma única responsabilidade
 
 ![Foto em que se vê um enorme kaiju atrás de prédios de três andares. O monstro é três vezes mais alto do que os prédios](https://img1.looper.com/img/gallery/the-best-kaiju-movies-youve-never-seen/intro-1516897231.jpg "Vai um suco de kaiju?")
