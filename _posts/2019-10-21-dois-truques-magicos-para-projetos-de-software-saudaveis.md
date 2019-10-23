@@ -77,7 +77,7 @@ Aplicando esse conceito aos nossos projetos, o que temos é que eles serão baca
 - Use ferramentas de análise estática, como Lint e Sonar, para analisar o código. A partir de características como da quantidade de linhas, número de métodos e quantidade de relacionamentos com outras classes, essas ferramentas conseguem identificar se sua classe está virando um canivete suíço.
 - Não se limite a meramente obter essas métricas. Use-as como pontos decisivos em seu processo de build. Se as métricas estiverem desfavoráveis em relação aos limites definidos por você, o build _precisa_ falhar.
 - Não paralise os trabalhos do seu time. Se você ativar essa quebra de build em um projeto em andamento, configure os limites dos indicadores de qualidade de acordo com o estado atual que foi medido no projeto. Se hoje ele tem 4 kaijus e 15 megazords, assim seja.
-- Se sua erramenta de análise tiver a capacidade de inspecionar apenas o código novo, como o Sonar, que vai ser incorporado ao seu projeto, aí sim, você pode ser radical: megazords recém saídos da fábrica não podem entrar e ponto final.
+- Se sua ferramenta de análise tiver a capacidade de inspecionar apenas o código que está entrando com o commit (como o SonarQube), aí sim, você pode ser radical: megazords recém saídos de fábrica não podem entrar e ponto final.
 
 ## Conclusão
 
