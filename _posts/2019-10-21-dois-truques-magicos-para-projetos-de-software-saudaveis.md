@@ -81,10 +81,10 @@ Aplicando esse conceito aos nossos projetos, o que temos é que eles serão baca
 
 ## Conclusões
 
-- O rigor com o código que está entrando no projeto é interessante para não aumentar o débito técnico do projeto. Se o projeto for iniciado já com essas barreiras, as chances de ele evoluir de maneira saudável são muito boas.
+- O rigor com o código que está entrando na base é interessante para permitir que o passivo técnico aumente. Se o projeto for iniciado já com essas barreiras, as chances de ele evoluir de maneira saudável são muito boas.
 - As medidas também valem para projetos em andamento. Se eles já têm seu passivo técnico, paciência, mas ele ao menos não vai aumentar.
 - O início da adoção pode ser doloroso e gerar ruídos. Contudo, com o tempo, o time se adapta e divide o trabalho em partes menores para que os ajustes sejam mais fáceis caso o código seja reprovado no processo de build.
-- As práticas citadas neste texto só funcionam se forem verdadeiramente abraçadas pelas pessoas. Não são apenas ferramentas que nos ajudam, mas o entendimento de que nós, como humanos, eventualmente nos distraímos e erramos. As ferramentas estão lá para nos apontar os problemas quando deixarmos o cachimbo cair.
+- Por melhores que eventualmente sejam as ferramentas, as práticas só funcionam se forem abraçadas pelas pessoas. Não é apenas o ferramental que nos ajuda, mas o entendimento de que nós, como humanos, eventualmente nos distraímos e erramos. As ferramentas estão lá para nos apontar os problemas quando deixarmos o cachimbo cair.
     
 
 ### Para ler mais
