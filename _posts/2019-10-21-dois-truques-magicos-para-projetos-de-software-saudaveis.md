@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Dois truques mágicos para manter projetos de software saudáveis
+title:  Dois truques mágicos para manter uma base de código saudável
 image: https://m.media-amazon.com/images/M/MV5BNTEyNzk4MTYtMjFkMC00YjZlLWFhMjItNTRmMzc1OGMyMzMyXkEyXkFqcGdeQXVyNjMxNDE2ODU@._V1_.jpg
 tags: engenharia de software, testes, qualidade
 ---
@@ -25,7 +25,7 @@ _Aliás, não se limite a exigir uma cobertura total. Use esse momento para prep
 ## Motivações
 
 - Aumentar a cobertura de código quando a base estiver grande é mais penoso
-- Testes não nos livram de problemas, mas a ausência deles multiplica a certeza de que eles virão
+- Testes não nos livram integralmente de . Contudo, em qual cenário é mais provável topar com mais problemas: uma base de código com testes ou sem?
 - Mesmo que o time não pratique os testes primeiro ([TDD](https://pt.wikipedia.org/wiki/Test-driven_development)), escrever um grande volume de testes depois de fazer o código é muito sofrido. O build, muito provavelmente, vai quebrar. Isso condiciona as pessoas a fazer commits menores e, por conta disso, dividir as tarefas em partes menores.
 - Tarefas mais atômicas proporcionam uma melhor visibilidade do andamento do projeto e oportunidades de paralelismo entre os membros do time
 - Times muito paralelos, por sua vez, tendem a perceber mais rapidamente os incômodos do código, como classes que comecem a fazer mais coisas do que deveriam. Muitas pessoas mexendo em uma mesma classe normalmente é um sinal de que ela tem muitas dependências e/ou responsabilidades. Modificá-la fica cada vez mais difícil.
@@ -79,9 +79,12 @@ Aplicando esse conceito aos nossos projetos, o que temos é que eles serão baca
 - Não paralise os trabalhos do seu time. Se você ativar essa quebra de build em um projeto em andamento, configure os limites dos indicadores de qualidade de acordo com o estado atual que foi medido no projeto. Se hoje ele tem 4 kaijus e 15 megazords, assim seja.
 - Se sua ferramenta de análise tiver a capacidade de inspecionar apenas o código que está entrando com o commit (como o SonarQube), aí sim, você pode ser radical: megazords recém saídos de fábrica não podem entrar e ponto final.
 
-## Conclusão
+## Conclusões
 
-As práticas citadas neste texto só funcionam se forem abraçadas pelas pessoas e cercadas pelas ferramentas de integração/entrega contínuas. É preciso que o time compre as ideias para que as ferramentas não sejam abandonadas. Estas, por sua vez, resolvem um problema humano: nós eventualmente nos distraímos e erramos.
+- O rigor com o código que está entrando no projeto é interessante para não aumentar o débito técnico do projeto. Se o projeto for iniciado já com essas barreiras, as chances de ele evoluir de maneira saudável são muito boas.
+- As medidas também valem para projetos em andamento. Se eles já têm seu passivo técnico, paciência, mas ele ao menos não vai aumentar.
+- O início da adoção pode ser doloroso e gerar ruídos. Contudo, com o tempo, o time se adapta e divide o trabalho em partes menores para que os ajustes sejam mais fáceis caso o código seja reprovado no processo de build.
+- As práticas citadas neste texto só funcionam se forem verdadeiramente abraçadas pelas pessoas. Não são apenas ferramentas que nos ajudam, mas o entendimento de que nós, como humanos, eventualmente nos distraímos e erramos. As ferramentas estão lá para nos apontar os problemas quando deixarmos o cachimbo cair.
     
 
 ### Para ler mais
