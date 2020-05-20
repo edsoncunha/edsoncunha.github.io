@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="posts">
+  <script>
+    function zap() {
+      var phone = document.getElementById("phone").value;
+
+      phone = phone.replace(/[^0-9]/gi, "");
+
+      phone = phone.replace(/^0+/g, "");
+
+      if (phone.length <= 9) {
+        phone = "31" + phone;
+      }
+
+      if (phone.length <= 11) {
+        phone = "55" + phone;
+      }
+
+      location.href = "https://api.whatsapp.com/send?phone=" + phone;
+    }
+  </script>
+
+ <input type="text" id="phone"> <input type="button" onclick="zap()" value="Enviar">
+</div>
