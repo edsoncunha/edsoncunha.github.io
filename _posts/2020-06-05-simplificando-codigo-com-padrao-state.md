@@ -11,7 +11,7 @@ tags: código, padrões
 
 Com o tempo, fica cada vez mais difícil resolver bugs e acrescentar requisitos. Não poder excluir um pedido depois que ele já foi enviado, não poder excluir um usuário se ele já fez uma compra, verificar os estados de vários flags, colocar ifs com base nesses flags em várias partes do código, e por aí vai.
 
-![Poste com muitos, muitos gatos](/images/2019/12/02/poste-com-emaranhado-de-fios.jpg)
+![Poste com muitos, muitos gatos](/images/2019/12/02/poste.jpg)
 <p class="figcaption">O código, depois de algumas sprints...</p>
 
 **De modo geral, os sintomas são estes**:
