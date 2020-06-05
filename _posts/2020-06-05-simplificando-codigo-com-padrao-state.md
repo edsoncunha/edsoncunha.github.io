@@ -71,7 +71,7 @@ class Aprovado: EstadoReclamacao
 
 #### O pulo do gato
 
-As ações na reclamação variam conforme o estado da campanha. Portanto, cada estado trata a ação à sua maneira:
+As ações na reclamação variam conforme o estado da reclamação. Portanto, cada estado trata a ação à sua maneira:
 
 ```kotlin
 abstract class EstadoReclamacao {
