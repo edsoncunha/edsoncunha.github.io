@@ -12,17 +12,13 @@ tags: código, padrões
 Com o tempo, fica cada vez mais difícil resolver bugs e acrescentar requisitos. Não poder excluir um pedido depois que ele já foi enviado, não poder excluir um usuário se ele já fez uma compra, verificar os estados de vários flags, colocar ifs com base nesses flags em várias partes do código, e por aí vai.
 
 ![Poste com muitos, muitos gatos](/images/2019/12/02/poste.jpg)
-<p class="figcaption">O código, depois de algumas sprints...</p>
+<p class="figcaption">O código, depois de algumas entregas...</p>
 
 **De modo geral, os sintomas são estes**:
 
-- Aparecem atributos remetendo a status e datas. Exemplos: `data_criacao`, `data_alteracao`, `data_exclusao`, `criado`, `inativo`, `cancelado`.
-- Existem variações importantes de comportamento associadas a datas e/ou flags. Se o status é `criado`, algumas ações são possíveis, se `excluido`, as ações possíveis são outras, e assim por diante.
+- Aparecem atributos remetendo a estados e datas. Exemplos: `data_criacao`, `data_alteracao`, `data_exclusao`, `criado`, `inativo`, `cancelado`.
+- Existem variações importantes de comportamento associadas a datas e/ou flags. Se o estado é `criado`, algumas ações são possíveis, se `excluido`, as ações possíveis são outras, e assim por diante.
 - Fica cada vez sofrido acrescentar novas ações e corrigir problemas conforme o tempo passa.
-
-<!-- ## A solução
-
-Analisando com calma, percebemos que o comportamento dos objetos varia conforme um ou vários status. Que tal fazermos uma subclasse para cada estado desse objeto, então? Existem restrições importantes sobre isso, mas a essência da ideia pode ser preservada com um pouco de criatividade e muita elegância. Mais detalhes sobre isso adiante. -->
 
 ## Um Estudo de Caso
 
@@ -55,30 +51,30 @@ Podemos então fazer um mapeamento entre os estados e as transições possíveis
 
 ![Estados das reclamações](/images/2019/12/02/reclamacao-estados.png)
 
-Os vértices são os estados e as arestas são as ações que levam de um estado a outro. Se uma reclamação é submetida, ela passa do status de `Rascunho` para o status de `Em avaliação` por meio da ação `submeter()`, que conecta os dois estados.
+Os vértices são os estados e as arestas são as ações que levam de um estado a outro. Se uma reclamação é submetida, ela passa do estado de `Rascunho` para o estado de `Em avaliação` por meio da ação `submeter()`, que conecta os dois estados.
 
-A partir desse modelo, fica bem mais fácil compreender quais ações são possíveis conforme o status de uma reclamação. Ele nos ajuda a gerenciar a absorver melhor a complexidade, além de podermos usá-lo para conversar sobre os requisitos do projeto.
+A partir desse modelo, fica bem mais fácil compreender quais ações são possíveis conforme o estado de uma reclamação. Ele nos ajuda a gerenciar a absorver melhor a complexidade, além de podermos usá-lo para conversar sobre os requisitos do projeto.
 
 ### Como implementar a máquina?
 
 Agora, fica mais fácil compreender que cada estado (vértice do grafo) pode ser envelopado em uma classe específica. Pela sua concisão, todos os exemplos de código do texto serão dados em Kotlin:
 
 ```kotlin
-class Rascunho: StatusReclamacao
+class Rascunho: EstadoReclamacao
 
-class EmAvaliacao: StatusReclamacao
+class EmAvaliacao: EstadoReclamacao
 
-class Reprovado: StatusReclamacao
+class Reprovado: EstadoReclamacao
 
-class Aprovado: StatusReclamacao
+class Aprovado: EstadoReclamacao
 ```
 
 #### O pulo do gato
 
-As ações na reclamação variam conforme o status da campanha. Portanto, cada status trata a ação à sua maneira:
+As ações na reclamação variam conforme o estado da campanha. Portanto, cada estado trata a ação à sua maneira:
 
 ```kotlin
-abstract class StatusReclamacao {
+abstract class EstadoReclamacao {
     fun editar(reclamacao: Reclamacao)
 
     fun submeter(reclamacao: Reclamacao)
@@ -90,7 +86,7 @@ abstract class StatusReclamacao {
     fun acaoNaoSuportada() = throw NotSupportedException()
 }
 
-class Rascunho: StatusReclamacao {
+class Rascunho: EstadoReclamacao {
     fun submeter(reclamacao: Reclamacao) {
         // seu código
     }
@@ -104,7 +100,7 @@ class Rascunho: StatusReclamacao {
     fun reprovar(reclamacao: Reclamacao) = acaoNaoSuportada()
 }
 
-class EmAvaliacao: StatusReclamacao {
+class EmAvaliacao: EstadoReclamacao {
     fun submeter(reclamacao: Reclamacao) = acaoNaoSuportada()
 
     fun editar() = acaoNaoSuportada()
@@ -124,14 +120,14 @@ class EmAvaliacao: StatusReclamacao {
 Por fim, escrevemos o código para que o objeto `reclamacao` *repasse* as ações `submeter()`, `editar()`, `aprovar()` e `reprovar()` ao seu estado corrente.
 
 ```kotlin
-class Reclamacao(val conteudo: String, internal var status: StatusReclamacao) {
-    fun editar() = status.editar(this)
+class Reclamacao(val conteudo: String, internal var estado: EstadoReclamacao) {
+    fun editar() = estado.editar(this)
 
-    fun submeter() = status.submeter(this)
+    fun submeter() = estado.submeter(this)
 
-    fun aprovar() = status.aprovar(this)
+    fun aprovar() = estado.aprovar(this)
 
-    fun reprovar() = status.reprovar(this)
+    fun reprovar() = estado.reprovar(this)
 }
 ```
 
@@ -148,11 +144,11 @@ Existem pelo menos duas maneiras de fazer as transições:
 Por brevidade, seguirei a abordagem (b). Nela, portanto, se o estado vigente é `EmAvaliacao` e ele processar a ação `aprovar()`, é o próprio código da classe `EmAvaliacao` que atualizará o estado da nossa `reclamacao` para `Aprovado`:
 
 ```kotlin
-class EmAvaliacao: StatusReclamacao {
+class EmAvaliacao: EstadoReclamacao {
     // ...
 
     fun aprovar(reclamacao: Reclamacao) {
-        reclamacao.status = Aprovado()
+        reclamacao.estado = Aprovado()
     }
 
     // ...
