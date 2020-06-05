@@ -135,7 +135,7 @@ class Reclamacao(val conteudo: String, internal var estado: EstadoReclamacao) {
 
 Até agora, movemos com sucesso as responsabilidades que dependem de cada estado. Mas como _mudar_ de um estado a outro? O que fizemos até aqui foi _delegar_ o comportamento específico a cada estado.
 
-Existem pelo menos duas maneiras de fazer as transições:
+Existem pelo menos três maneiras de fazer as transições:
 
 - a) uma classe gerenciadora, que tenha a visão do todo e gerencie as comutações. Alguns frameworks, como o Spring, funcionam desta maneira. Por um lado, essa abordagem facilita no entendimento global de quais são as possibilidades daquela máquina de estados. Por outro, ela tende a favorecer classes inchadas, o que não gosto.
 - b) cada estado indica o estado seguinte, conforme a ação que é disparada dentro dele. Prefiro esta abordagem. Com ela, os testes unitários ficam bem mais expressivos e elegantes.
