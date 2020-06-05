@@ -18,7 +18,7 @@ Com o tempo, fica cada vez mais difícil resolver bugs e acrescentar requisitos.
 
 - Aparecem atributos remetendo a estados e datas. Exemplos: `data_criacao`, `data_alteracao`, `data_exclusao`, `criado`, `inativo`, `cancelado`.
 - Existem variações importantes de comportamento associadas a datas e/ou flags. Se o estado é `criado`, algumas ações são possíveis, se `excluido`, as ações possíveis são outras, e assim por diante.
-- Fica cada vez sofrido acrescentar novas ações e corrigir problemas conforme o tempo passa.
+- Fica cada vez mais sofrido acrescentar novas ações e corrigir problemas conforme o tempo passa.
 
 ## Um Estudo de Caso
 
