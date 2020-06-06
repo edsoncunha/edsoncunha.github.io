@@ -155,4 +155,7 @@ class EmAvaliacao: EstadoReclamacao {
 }
 ```
 
+**Falar é de graça**
+Você pode conferir o [código-fonte no Github](https://github.com/edsoncunha/tutorials/tree/master/pt-br/maquina-de-estados/kotlin).
+
 O que achou? Se quiser discutir implementações específicas, envolvendo linguagens e frameworks de mercado, deixe um comentário ou mande uma mensagem.
